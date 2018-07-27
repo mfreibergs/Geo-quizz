@@ -24,7 +24,7 @@ $quiz_type = $mysqli->query($query) or die($mysqli->error.__LINE__);
 	<form method="post" action="question.php?n=1">
 		<input type="text" name="username" placeholder="Username" required>
 			<select class="custom-select" name="qType" style="width: 200px">
-					<option>Quiz type</option>
+					<option disabled selected>Quiz type</option>
 				<?php while($type = $quiz_type->fetch_assoc()): ?>
 					<option><?php echo $type['quiz_type']; ?></option>
 				<?php endwhile; ?>
