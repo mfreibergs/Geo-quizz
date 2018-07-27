@@ -118,24 +118,18 @@ h1{
   overflow: hidden;
 }
 
-
 /* Dizains priekš drop down menu priekš testa tipa 'quiz type' */
 
 select {
-background-image:url(https://png.icons8.com/ios/1600/down.png);
-background-repeat:no-repeat;
 background-position:300px;
 font-family: sans-serif, Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 width:353px;
-padding:12px;
 margin-left:40%;
 margin-bottom: 23px;
-line-height:1;
 border-radius:2px;
 background-color:#D7D7D7;
 color:#717171;
 font-size:20px;
--webkit-appearance:none;
 box-shadow:inset 0 0 1px 0 rgba(0,0,0,0.6);
 outline:none
 }
