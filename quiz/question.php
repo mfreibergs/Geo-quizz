@@ -72,11 +72,11 @@
 				</ul>
 				<input type="submit" value="Submit" />
 				<input type="hidden" name="number" value="<?php echo $number; ?>" />
-				  <div class="progress">
-    <div class="meter">
-  <span style="width: <?php echo ($number-1)/$total*100; ?>%"></span>
-</div>
-  </div>
+				<div class="progress">
+    					<div class="meter">
+  						<span style="width: <?php echo ($number-1)/$total*100; ?>%"></span>
+					</div>
+  				</div>
 			</form>
 		</div>
 	</main>
