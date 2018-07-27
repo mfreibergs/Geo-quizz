@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* CSS Dokuments */
+body{
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 20px;
+	line-height: 15mm;
+}
+
+a{
+	text-decoration: none;
+}
+
+label:hover{
+	background-color: #F0EAD6;
+}
+
+input[type="radio"]:checked + label{
+	background-color: #F0EAD6;
+}
+
+input[type='radio']{
+	display: none;
+}
+
+.custom-select{
+	margin-left: 40%;
+	height: 300px;
+	font-size: 500px;
+}
+
+label{
+	border-radius: 15px;
+	background-color: #E3DAC9;
+	display: inline-block;
+	width: 220px;
+	height: 50px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 35px;
+    transition-duration: 0.5s;
+
+}
+
+
+input[type="submit"]{
+	border-radius: 5px;
+	font-size: 30px;
+	display:inline-block;
+	color: #717171;
+	background:#D7D7D7;
+	border: 1px solid #898989;
+	width: 120px;
+	height: 45px;
+	margin-left: 47%;
+}
+
+a{
+	border-radius: 5px;
+	font-size: 28px;
+	display:inline-block;
+	color: #717171;
+	background:#D7D7D7;
+	border: 1px solid #898989;
+	width: 170px;
+	height: 45px;
+	margin-left: 42%;
+	text-align: center;
+}
+
+input[type="text"]{
+	width: 200px;
+	margin-left: 40%;
+	font-size: 20px;
+}
+.choices{    
+    column-width: 15.5em; 
+	max-width: 500px;
+	margin-left: 30%;
+}
+
+.question{
+	margin-left: 28%;
+	font-size: 40px
+}
+
+.current{
+	font-size: 25px;
+}
+
+
+
+h1{
+	text-align: center;
+}
