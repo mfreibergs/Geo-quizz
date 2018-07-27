@@ -22,9 +22,7 @@
 <body>
 	
 	<header>
-		<div class="container">
-			<h1>Geography Quiz</h1>
-		</div>
+		<h1>Geography Quiz</h1>
 	</header>
 	<main>
 		<!-- Apsveic lietotāju par testa izpildīšanu un parāda, cik daudz atbildes bija pareizas -->
