@@ -2,7 +2,7 @@
 <?php session_start(); ?>
 <?php 
 
-	//	Iegūst kopējo jautājājumu skaitu
+	//	Iegūst lietotājvārdu, rezultātu, testa tipu un kopējo jautājumu skaitu
 	$username = $_SESSION['username'];
 	$score = $_SESSION['score'];
 	$qtype = $_SESSION['qType'];
