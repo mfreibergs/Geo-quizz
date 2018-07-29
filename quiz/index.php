@@ -6,7 +6,7 @@
 $query = "SELECT * FROM `questions` 
 			WHERE question_number = 1";
 
-$quiz_type = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$quiz_type = $mysqli->query($query) or die($mysqli->error);
 
 ?>
 <!doctype html>
@@ -22,9 +22,9 @@ $quiz_type = $mysqli->query($query) or die($mysqli->error.__LINE__);
 	<h1>Geography quiz</h1>
 	<!-- Lietotājs ievada savu lietotājvārdu un izvēlas testa tipu 'quiz type' -->
 	<form method="post" action="question.php?n=1">
-		<input type="text" name="username" placeholder="Username" required>
+		<input type="text" name="username" placeholder="Username" required><br>
 			<select class="custom-select" name="qType" style="width: 200px">
-					<option disabled selected>Quiz type</option>
+					<option disabled selected>Quiz type v</option>
 				<?php while($type = $quiz_type->fetch_assoc()): ?>
 					<option><?php echo $type['quiz_type']; ?></option>
 				<?php endwhile; ?>
@@ -33,6 +33,5 @@ $quiz_type = $mysqli->query($query) or die($mysqli->error.__LINE__);
 		<input type="submit" class="start" value="Start">
 	</form>
 
-	
 </body>
 </html>
