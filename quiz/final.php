@@ -2,7 +2,7 @@
 <?php session_start(); ?>
 <?php 
 
-	//	Iegūst lietotājvārdu, rezultātu, testa tipu un kopējo jautājumu skaitu
+	//	Iegūst kopējo jautājājumu skaitu
 	$username = $_SESSION['username'];
 	$score = $_SESSION['score'];
 	$qtype = $_SESSION['qType'];
@@ -13,9 +13,12 @@
 	$result = $mysqli->query($query) or die($mysqli->error);
 	$total = $result->num_rows;
 
-	$sql = "INSERT INTO `users` (username, quiz_type, cor_ans)
-				VALUES ('$username', '$qtype', '$score');";
-	$insert_user = $mysqli->query($sql) or die($mysqli->error);
+
+
+$sql = $mysqli->prepare("INSERT INTO `users` (username, quiz_type, cor_ans)
+				VALUES (?,?,?);");
+$sql->bind_param("ssi", $username, $qtype, $score);
+$sql->execute();
 ?>
 <!doctype html>
 <html>
