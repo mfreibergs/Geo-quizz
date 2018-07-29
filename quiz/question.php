@@ -17,7 +17,7 @@
 			WHERE question_number = $number AND quiz_type = '$qtype'";
 
 	
-	$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+	$result = $mysqli->query($query) or die($mysqli->error);
 
 	$questions = $result->fetch_assoc();
 
@@ -26,14 +26,14 @@
 	$query = "SELECT * FROM `choices` 
 			WHERE question_number = $number AND quiz_type = '$qtype'";
 
-	$choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
+	$choices = $mysqli->query($query) or die($mysqli->error);
 	
 
 	//	Iegūst kopējo jautājumu skaitu
 	$query = "SELECT * FROM `questions`
 				WHERE quiz_type = '$qtype'";
 
-	$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+	$result = $mysqli->query($query) or die($mysqli->error);
 	$total = $result->num_rows;
 
 ?>
@@ -73,8 +73,8 @@
 				<input type="submit" value="Submit" />
 				<input type="hidden" name="number" value="<?php echo $number; ?>" />
 				<div class="progress">
-    					<div class="meter">
-  						<span style="width: <?php echo ($number-1)/$total*100; ?>%"></span>
+    				<div class="meter">
+ 						<span style="width: <?php echo ($number-1)/$total*100; ?>%"></span>
 					</div>
   				</div>
 			</form>
