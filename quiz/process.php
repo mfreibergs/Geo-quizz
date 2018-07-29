@@ -20,7 +20,7 @@ if($_POST){
 	$query = "SELECT * FROM `questions`
 				WHERE quiz_type = '$qtype'";
 	
-	$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+	$result = $mysqli->query($query) or die($mysqli->error);
 	$total = $result->num_rows;
 	
 	
@@ -29,7 +29,7 @@ if($_POST){
 	$query = "SELECT * FROM `choices`
 				WHERE question_number = $number AND is_correct = 1 AND quiz_type = '$qtype'";
 				
-	$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+	$result = $mysqli->query($query) or die($mysqli->error);
 	
 	$row = $result->fetch_assoc();
 	
@@ -43,6 +43,7 @@ if($_POST){
 	
 	//	Pārbauda vai ir pēdējais jautājums
 	if($number == $total){
+		$_POST['total'] = $total;
 		header("Location: final.php");
 		exit();
 	} else{
