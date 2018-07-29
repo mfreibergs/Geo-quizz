@@ -2,7 +2,7 @@
 <?php session_start(); ?>
 <?php 
 
-	//	Iegūst kopējo jautājājumu skaitu
+	//	Iegūst lietotājvārdu, rezultātu, testa tipu un kopējo jautājājumu skaitu
 	$username = $_SESSION['username'];
 	$score = $_SESSION['score'];
 	$qtype = $_SESSION['qType'];
@@ -14,7 +14,7 @@
 	$total = $result->num_rows;
 
 
-
+//	Tiek ievadits lietotajs datubāzē un tiek izveidota aizsardzība pret mysql injection
 $sql = $mysqli->prepare("INSERT INTO `users` (username, quiz_type, cor_ans)
 				VALUES (?,?,?);");
 $sql->bind_param("ssi", $username, $qtype, $score);
